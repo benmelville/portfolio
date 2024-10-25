@@ -1,6 +1,26 @@
 import logo from './logo.svg';
 import './App.css';
+import Button from './components/Button';
+import Card from './components/Card';
+import CardCounter from './components/CardCounter';
 
+
+const cardData = {
+  card1: {
+    cardName: "Benjamin Melville",
+    description: "embedded software engineer",
+  },
+  card2: {
+    cardName: "dave",
+    description: "neuroscience",
+  },
+  card3: {
+    cardName: "doug",
+    description: "physics",
+  },
+}
+
+// Create and arrange parts of app here
 function App() {
   return (
     <div className="App">
@@ -15,8 +35,14 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
         </a>
+        <CardCounter />
+        <div>
+          <Card {...cardData.card1} />
+          <Card {...cardData.card2} />
+          <Card />
+        </div>
+        <Button></Button>
       </header>
     </div>
   );
