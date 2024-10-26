@@ -1,0 +1,52 @@
+.cursor {
+    pointer-events: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.boxwork {
+    pointer-events: none;
+    width: 40px;
+    height: 40px;
+    background: #171717;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+
+}
+
+.cursor::after, .cursor::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    background-image: conic-gradient(from var(--angle), lightgreen, orange, lightgreen);
+    z-index: -2;
+    padding: 21px;
+    box-sizing: border-box;
+    animation: spin 3s linear infinite;
+}
+
+.cursor::after {
+    filter: blur(0rem);
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+
+}
