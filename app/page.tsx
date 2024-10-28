@@ -27,14 +27,16 @@ export default function Home() {
             <span>e</span>
           </h1>
         </Link>
+    </div>
+    <aside>
+      hi, im ben welcome to my website!
+    </aside>
         <Canvas>
-        <pointLight position={[0, 0, 0]} color="green" intensity={100} />
+        <pointLight position={[0, 0, 0]} color="green" intensity={1000} />
         <mesh scale={2.5}>
             <sphereGeometry/>
           </mesh>
-          <mes
         </Canvas>
-    </div>
       </ParallaxLayer>
 
       <ParallaxLayer offset={1} speed={1.5}>
