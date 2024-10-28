@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Orbitron } from '@next/font/google';
+import { Orbitron } from 'next/font/google';
 import Cursor from "./utils/useMousePosition";
 const roboto = Orbitron({
   subsets: ['latin'],

@@ -2,6 +2,8 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
+import { Canvas } from "@react-three/fiber";
+import { PointLight } from "three";
 
 export default function Home() {
 
@@ -25,6 +27,13 @@ export default function Home() {
             <span>e</span>
           </h1>
         </Link>
+        <Canvas>
+        <pointLight position={[0, 0, 0]} color="green" intensity={100} />
+        <mesh scale={2.5}>
+            <sphereGeometry/>
+          </mesh>
+          <mes
+        </Canvas>
     </div>
       </ParallaxLayer>
 
