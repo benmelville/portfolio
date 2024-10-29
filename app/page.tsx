@@ -4,6 +4,12 @@ import styles from "./page.module.css";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { Canvas } from "@react-three/fiber";
 import { PointLight } from "three";
+import Scene from "@/components/Ben/scene";
+import dynamic from "next/dynamic";
+
+const BenScene = dynamic(() => import("@/components/Ben/scene"), {
+   ssr: false // only render client-side
+  })
 
 export default function Home() {
 
@@ -31,12 +37,7 @@ export default function Home() {
     <aside>
       hi, im ben welcome to my website!
     </aside>
-        <Canvas>
-        <pointLight position={[0, 0, 0]} color="green" intensity={1000} />
-        <mesh scale={2.5}>
-            <sphereGeometry/>
-          </mesh>
-        </Canvas>
+    <BenScene />
       </ParallaxLayer>
 
       <ParallaxLayer offset={1} speed={1.5}>
